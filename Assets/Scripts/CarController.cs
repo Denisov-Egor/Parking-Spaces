@@ -92,10 +92,22 @@ public class CarController : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter(Collision other)
+    void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Car"))
+        if (other.CompareTag("Car"))
         {
+            if (CarAxis == Axis.Horizontal && isClicked)
+            {
+                float adding = CarDirectionX == Direction.Left ? 0.5f : -0.5f;
+                transform.position = new Vector3(transform.position.x, 0, transform.position.z + adding);
+            }
+
+            if (CarAxis == Axis.Vertical && isClicked)
+            {
+                float adding = CarDirectionY == Direction.Top ? 0.5f : -0.5f;
+                transform.position = new Vector3(transform.position.x + adding, 0, transform.position.z);
+            }
+
             isClicked = false;
         }
     }
