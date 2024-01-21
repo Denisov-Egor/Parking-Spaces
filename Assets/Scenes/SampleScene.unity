@@ -2003,6 +2003,7 @@ MonoBehaviour:
   speed: 5
   finalSpeed: 15
   rotateSpeed: 350
+  CarAxis: 1
 --- !u!1 &876732737
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2196,7 @@ MonoBehaviour:
   speed: 5
   finalSpeed: 15
   rotateSpeed: 350
+  CarAxis: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,6 +3093,7 @@ MonoBehaviour:
   speed: 5
   finalSpeed: 15
   rotateSpeed: 350
+  CarAxis: 0
 --- !u!1001 &1286271113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5032,6 +5035,7 @@ MonoBehaviour:
   speed: 5
   finalSpeed: 15
   rotateSpeed: 350
+  CarAxis: 1
 --- !u!65 &2135507728
 BoxCollider:
   m_ObjectHideFlags: 0

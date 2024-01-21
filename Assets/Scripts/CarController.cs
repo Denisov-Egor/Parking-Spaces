@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class CarController : MonoBehaviour
 {
@@ -90,6 +89,14 @@ public class CarController : MonoBehaviour
             }
 
             _rb.MovePosition(_rb.position + whichWay * speed * Time.fixedDeltaTime);
+        }
+    }
+
+    void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("Car"))
+        {
+            isClicked = false;
         }
     }
 }
