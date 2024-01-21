@@ -92,9 +92,9 @@ public class CarController : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Car"))
+        if (other.CompareTag("Car") || other.CompareTag("Barrier"))
         {
             if (CarAxis == Axis.Horizontal && isClicked)
             {
