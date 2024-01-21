@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Trigger Road
   - Car
+  - Barrier
   layers:
   - Default
   - TransparentFX

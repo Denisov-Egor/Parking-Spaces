@@ -32,20 +32,23 @@ public class CarController : MonoBehaviour
 
     void OnMouseDown()
     {
+        curPoinX = Input.GetTouch(0).position.x;
+        curPoinX = Input.GetTouch(0).position.y;
+
         curPoinX = Input.mousePosition.x;
         curPoinY = Input.mousePosition.y;
     }
 
     void OnMouseUp()
     {
-        if (Input.mousePosition.x - curPoinX > 0)
+        if (Input.mousePosition.x - curPoinX > 0 || Input.GetTouch(0).position.x - curPoinX > 0)
         {
             CarDirectionX = Direction.Right;
         } else {
             CarDirectionX = Direction.Left;
         }
 
-        if (Input.mousePosition.y - curPoinY > 0)
+        if (Input.mousePosition.y - curPoinY > 0 || Input.GetTouch(0).position.y - curPoinX > 0)
         {
             CarDirectionY = Direction.Top;
         } else {
